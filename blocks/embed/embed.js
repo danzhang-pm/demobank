@@ -49,6 +49,14 @@ const loadScript = (url, callback, type) => {
     return embedHTML;
   };
   
+  const embedBilibili = (url, autoplay) => {
+    const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
+        <iframe src="${url}" 
+        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+      </div>`;
+    return embedHTML;
+  };
+
   const embedTwitter = (url) => {
     const embedHTML = `<blockquote class="twitter-tweet"><a href="${url.href}"></a></blockquote>`;
     loadScript('https://platform.twitter.com/widgets.js');
@@ -72,6 +80,10 @@ const loadScript = (url, callback, type) => {
       {
         match: ['twitter'],
         embed: embedTwitter,
+      },
+      {
+        match: ['bilibili'],
+        embed: embedBilibili,
       },
     ];
   

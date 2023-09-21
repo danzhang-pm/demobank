@@ -51,7 +51,7 @@ const loadScript = (url, callback, type) => {
   
   const embedBilibili = (url, autoplay) => {
     const embedHTML = `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-        <iframe src="${url}" 
+        <iframe src="${url.href}" 
         scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
       </div>`;
     return embedHTML;

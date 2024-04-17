@@ -3,8 +3,8 @@
     "host": "demosession--demobank--danzhang-pm.hlx.live",
     "plugins": [
         {
-            "id": "library",
-            "title": "Library",
+            "id": "asset-library",
+            "title": "Assets Library DAN",
             "environments": ["edit"],
             "url": "/tools/sidekick/library.html",
             "includePaths": ["**.docx**"]
